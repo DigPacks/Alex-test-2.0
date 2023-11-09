@@ -413,7 +413,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\r\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
+                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1479,7 +1479,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "//'Schdule Screen Responsive'.Size <>1\r\nApp.ActiveScreen.Size <>1",
+                    "InvariantScript": "//'Schdule Screen Responsive'.Size <>1\nApp.ActiveScreen.Size <>1",
                     "Property": "Visible",
                     "RuleProviderType": "Unknown"
                   },
@@ -1840,7 +1840,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nFirst(Self.AllItems)",
+                "InvariantScript": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst(Self.AllItems)",
                 "Property": "Default",
                 "RuleProviderType": "Unknown"
               },
@@ -2252,7 +2252,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638351351977464963",
+    "LastModifiedTimestamp": "638351366482945964",
     "Name": "cmpTabListResponsive",
     "Rules": [
       {
@@ -2263,7 +2263,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "Table({\r\n        ID: 1,\r\n        Name: \"Members\",\r\n        Logo: Icon.Person,\r\n        ShowValidation: false\r\n    },\r\n    {\r\n        ID: 2,\r\n        Name: \"Projects\",\r\n        Logo: Icon.Draw,\r\n        ShowValidation: false\r\n    },\r\n    {\r\n        ID: 3,\r\n        Name: \"Schedule\",\r\n        Logo: Icon.CalendarBlank,\r\n        ShowValidation: false\r\n    })",
+        "InvariantScript": "Table({\n        ID: 1,\n        Name: \"Members\",\n        Logo: Icon.Person,\n        ShowValidation: false\n    },\n    {\n        ID: 2,\n        Name: \"Projects\",\n        Logo: Icon.Draw,\n        ShowValidation: false\n    },\n    {\n        ID: 3,\n        Name: \"Schedule\",\n        Logo: Icon.CalendarBlank,\n        ShowValidation: false\n    })",
         "Property": "pTabList",
         "RuleProviderType": "System"
       },
@@ -2417,7 +2417,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638351351977464963",
+  "LastModifiedTimestamp": "638351366482945964",
   "Name": "2b77487ee576453caf9ecdfa5abc419b",
   "OverridableProperties": {},
   "Version": "638181849512241847"

@@ -604,7 +604,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\r\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
+                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -2899,7 +2899,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\r\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
+                    "InvariantScript": "Set(locSelectedTab, ThisItem.ID);\nSwitch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -3896,7 +3896,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638351351977470635",
+    "LastModifiedTimestamp": "638351366482950352",
     "Name": "cmpTabList",
     "Rules": [
       {
@@ -3907,7 +3907,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "Table({\r\n        ID: 1,\r\n        Name: \"Members\",\r\n        Logo: Icon.Person,\r\n        ShowValidation: false\r\n    },\r\n    {\r\n        ID: 2,\r\n        Name: \"Projects\",\r\n        Logo: Icon.Draw,\r\n        ShowValidation: false\r\n    },\r\n    {\r\n        ID: 3,\r\n        Name: \"Schedule\",\r\n        Logo: Icon.CalendarBlank,\r\n        ShowValidation: false\r\n    })",
+        "InvariantScript": "Table({\n        ID: 1,\n        Name: \"Members\",\n        Logo: Icon.Person,\n        ShowValidation: false\n    },\n    {\n        ID: 2,\n        Name: \"Projects\",\n        Logo: Icon.Draw,\n        ShowValidation: false\n    },\n    {\n        ID: 3,\n        Name: \"Schedule\",\n        Logo: Icon.CalendarBlank,\n        ShowValidation: false\n    })",
         "Property": "pTabList",
         "RuleProviderType": "System"
       },
@@ -4046,7 +4046,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638351351977470635",
+  "LastModifiedTimestamp": "638351366482950352",
   "Name": "7e342171fca54308a735d2edea1c4423",
   "OverridableProperties": {},
   "Version": "638182707009785814"
