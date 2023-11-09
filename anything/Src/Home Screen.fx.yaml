@@ -392,7 +392,7 @@
             Align: ='TextCanvas.Align'.Center
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
-            Height: =19
+            Height: =24
             Size: =15
             Text: ="Add Member"
             VerticalAlign: ="Middle"
@@ -603,7 +603,7 @@
             Align: ='TextCanvas.Align'.Center
             AutoHeight: =false
             DisplayMode: =DisplayMode.Edit
-            Height: =19
+            Height: =25
             Size: =15
             Text: ="Audit"
             VerticalAlign: ="Middle"
