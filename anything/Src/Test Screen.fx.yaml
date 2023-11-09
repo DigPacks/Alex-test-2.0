@@ -1,0 +1,36 @@
+"'Test Screen' As screen":
+
+    cmpTabList_1 As cmpTabListResponsive:
+        Y: =117
+
+    cmpTabList_2 As cmpTabList:
+        Height: =55
+        Width: =428
+        X: =251
+        Y: =327
+        ZIndex: =2
+
+    "TabListNav_1 As 'Tab list'.pcfdataset":
+        AccessibleLabel: =""
+        Alignment: ='TabList.Alignment'.Horizontal
+        DefaultSelectedItems: |-
+            =[{NavMenu: gblCurrentScreen}]
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =0
+        Height: =69
+        Items: =DPM_NavMenus
+        OnSelect: =Switch(TabListNav_1.Selected.NavMenu, "Members",Navigate('Home Screen',ScreenTransition.Fade),"Projects", Navigate('Project Screen',ScreenTransition.Fade), "Schedule", Navigate('Schedule Screen',ScreenTransition.Fade)); Set(gblCurrentScreen, TabListNav_1.Selected.NavMenu)
+        Size: ="Large"
+        Width: =271
+        X: =547
+        Y: =554
+        ZIndex: =3
+
+        NavMenu1_1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="NavMenu"
+            FieldName: ="dig_navmenu"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+

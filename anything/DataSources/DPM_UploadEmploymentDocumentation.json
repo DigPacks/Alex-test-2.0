@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "cd39b8d8-a41f-4874-9b1a-177b77e413a4",
+    "Name": "DPM_UploadEmploymentDocumentation",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "a3d9373b-2add-ed11-a7c6-6045bdd1d26a"
+  }
+]

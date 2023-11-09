@@ -1,0 +1,131 @@
+{
+  "02a6c669-3b9b-4043-a601-6ecfe6bdc15c": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Project Documents",
+      "Employment Contracts",
+      "DPM_Test"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "1e0afce3-afc1-4b4b-b779-5cef0a3a0bc4",
+      "f2f5e68b-651f-4976-8518-44ad9805e7ae"
+    ],
+    "id": "02a6c669-3b9b-4043-a601-6ecfe6bdc15c"
+  },
+  "1e0afce3-afc1-4b4b-b779-5cef0a3a0bc4": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "02a6c669-3b9b-4043-a601-6ecfe6bdc15c": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "a3d9373b-2add-ed11-a7c6-6045bdd1d26a"
+        },
+        "workflowName": {
+          "value": "46668ab2-38eb-5590-0d60-c097939658fd"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "02a6c669-3b9b-4043-a601-6ecfe6bdc15c"
+        },
+        "workflowEntityId": {
+          "value": "a3d9373b-2add-ed11-a7c6-6045bdd1d26a"
+        },
+        "workflowName": {
+          "value": "46668ab2-38eb-5590-0d60-c097939658fd"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "DPM_UploadEmploymentDocumentation"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "02a6c669-3b9b-4043-a601-6ecfe6bdc15c"
+    },
+    "dependents": [],
+    "id": "1e0afce3-afc1-4b4b-b779-5cef0a3a0bc4"
+  },
+  "a939e0d1-cd99-4c2f-be42-8a067180f200": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Employment Contracts",
+      "DPM_Test",
+      "Project Documents"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a939e0d1-cd99-4c2f-be42-8a067180f200"
+  },
+  "f2f5e68b-651f-4976-8518-44ad9805e7ae": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "02a6c669-3b9b-4043-a601-6ecfe6bdc15c": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "49fcacce-fddd-ed11-a7c6-6045bdd1d26a"
+        },
+        "workflowName": {
+          "value": "65f68fff-e783-2621-0909-6cb03df2eab3"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "02a6c669-3b9b-4043-a601-6ecfe6bdc15c"
+        },
+        "workflowEntityId": {
+          "value": "49fcacce-fddd-ed11-a7c6-6045bdd1d26a"
+        },
+        "workflowName": {
+          "value": "65f68fff-e783-2621-0909-6cb03df2eab3"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "DPM_UploadProjectDocuments"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "02a6c669-3b9b-4043-a601-6ecfe6bdc15c"
+    },
+    "dependents": [],
+    "id": "f2f5e68b-651f-4976-8518-44ad9805e7ae"
+  }
+}

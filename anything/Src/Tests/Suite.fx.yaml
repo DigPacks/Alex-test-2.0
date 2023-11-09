@@ -1,0 +1,17 @@
+"'8c9624b6-b634-4b2b-8447-11c6f8876752' As TestSuite":
+    Description: =""
+    DisplayName: ="Suite"
+
+    "'3063dd96-f5b9-4e2a-8cba-5adfb6c567ca' As TestCase":
+        Description: =""
+        DisplayName: ="Case"
+
+        Step1 As TestStep:
+            Description: ="Select 'IcoAddData'"
+            Screen: =Home Screen
+            Value: =Select(IcoAddData)
+
+        Step2 As TestStep:
+            Description: =""
+            Value: =
+

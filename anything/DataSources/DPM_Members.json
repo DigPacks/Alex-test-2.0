@@ -1,0 +1,112 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_members",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_member",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_Members",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "bpf_dig_dpm_member_dig_dpm_memberequired": "DPM_MembeRequired",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_createdbydisplayname": "CreatedByDisplayName",
+      "dig_createdbyemail": "CreatedByEmail",
+      "dig_dig_dpm_schedule_LU_MemberID_dig_dpm_memb": "DPM_Schedules",
+      "dig_dpm_member_AsyncOperations": "System Jobs",
+      "dig_dpm_member_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_member_DuplicateBaseRecord": "Duplicate Records (dig_dpm_member_DuplicateBaseRecord)",
+      "dig_dpm_member_DuplicateMatchingRecord": "Duplicate Records (dig_dpm_member_DuplicateMatchingRecord)",
+      "dig_dpm_member_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_member_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_member_ProcessSession": "Process Sessions",
+      "dig_dpm_member_SyncErrors": "Sync Errors",
+      "dig_dpm_memberid": "DPM_Member",
+      "dig_enddate": "EndDate",
+      "dig_firstname": "FirstName",
+      "dig_fullname": "FullName",
+      "dig_lastname": "LastName",
+      "dig_memberid": "MemberID",
+      "dig_startdate": "StartDate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "processid": "Process Id",
+      "stageid": "(Deprecated) Stage Id",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_Members",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_Members (Views)",
+    "Name": "_dig_dpm_member_views",
+    "RelatedEntityName": "DPM_Members",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "26eb246a-8c2d-4abd-af04-1fb6e4419bc6": "Inactive DPM_Members",
+      "312744f8-73ea-ed11-8847-6045bdd1d26a": "All Members",
+      "32ee2c6e-a4ff-ed11-8f6d-6045bdd1d26a": "Current Members",
+      "4ca105cc-5d8a-4cd1-981a-d380004fd187": "DPM_Member Lookup View",
+      "db375502-a5ff-ed11-8f6d-6045bdd1d26a": "Inactive Members",
+      "db7ea1ad-a7c6-4ad3-ab1e-552dcea730e2": "DPM_Member Advanced Find View",
+      "ddf326ba-d0a6-47d0-9f6e-49b321cd5f68": "Active DPM_Members",
+      "f98f8941-09db-4a8c-bf3a-bbc86242c0e5": "DPM_Member Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_Members)",
+    "Name": "dig_dpm_member_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_Members"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_Members",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_Members)",
+    "Name": "dig_dpm_member_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_Members"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_Members",
+    "Type": "OptionSetInfo"
+  }
+]

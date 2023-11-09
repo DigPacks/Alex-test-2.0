@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr6a5_dig_tst_fileuploadtests",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr6a5_dig_tst_fileuploadtest",
+    "MaxGetRowsCount": 2000,
+    "Name": "DIG_TST_FileUploadTests",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr6a5_addedbydisplayname": "AddedByDisplayName",
+      "cr6a5_addedbyemail": "AddedByEmail",
+      "cr6a5_dig_tst_fileuploadtest_AsyncOperations": "System Jobs",
+      "cr6a5_dig_tst_fileuploadtest_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr6a5_dig_tst_fileuploadtest_DuplicateBaseRecord": "Duplicate Records (cr6a5_dig_tst_fileuploadtest_DuplicateBaseRecord)",
+      "cr6a5_dig_tst_fileuploadtest_DuplicateMatchingRecord": "Duplicate Records (cr6a5_dig_tst_fileuploadtest_DuplicateMatchingRecord)",
+      "cr6a5_dig_tst_fileuploadtest_FileAttachments": "FileAttachments",
+      "cr6a5_dig_tst_fileuploadtest_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr6a5_dig_tst_fileuploadtest_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr6a5_dig_tst_fileuploadtest_ProcessSession": "Process Sessions",
+      "cr6a5_dig_tst_fileuploadtest_SyncErrors": "Sync Errors",
+      "cr6a5_dig_tst_fileuploadtestid": "DIG_TST_FileUploadTest",
+      "cr6a5_fileuploaded": "FileUploaded",
+      "cr6a5_fileuploadtestid": "FileUploadTestID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DIG_TST_FileUploadTests",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DIG_TST_FileUploadTests (Views)",
+    "Name": "_cr6a5_dig_tst_fileuploadtest_views",
+    "RelatedEntityName": "DIG_TST_FileUploadTests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00ac09ff-e1b4-4f77-ae28-db4602c692f7": "DIG_TST_FileUploadTest Advanced Find View",
+      "18f5f922-7631-4262-9325-dd2ed9b0e832": "DIG_TST_FileUploadTest Lookup View",
+      "73d3c4b5-e296-4dcd-96d6-a744a6b4b523": "Inactive DIG_TST_FileUploadTests",
+      "78a37f6d-6241-45ec-8303-3734087d7066": "Active DIG_TST_FileUploadTests",
+      "ddca0b29-aa31-4b58-80f5-9b2871429ac3": "DIG_TST_FileUploadTest Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (DIG_TST_FileUploadTests)",
+    "Name": "cr6a5_dig_tst_fileuploadtest_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DIG_TST_FileUploadTests"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DIG_TST_FileUploadTests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DIG_TST_FileUploadTests)",
+    "Name": "cr6a5_dig_tst_fileuploadtest_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DIG_TST_FileUploadTests"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DIG_TST_FileUploadTests",
+    "Type": "OptionSetInfo"
+  }
+]

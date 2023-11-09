@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_statuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_status",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_Statuses",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_dpm_status_AsyncOperations": "System Jobs",
+      "dig_dpm_status_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_status_DuplicateBaseRecord": "Duplicate Records (dig_dpm_status_DuplicateBaseRecord)",
+      "dig_dpm_status_DuplicateMatchingRecord": "Duplicate Records (dig_dpm_status_DuplicateMatchingRecord)",
+      "dig_dpm_status_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_status_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_status_ProcessSession": "Process Sessions",
+      "dig_dpm_status_SyncErrors": "Sync Errors",
+      "dig_dpm_statusid": "DPM_Status",
+      "dig_prostatus": "ProStatus",
+      "dig_status": "Status (dig_status)",
+      "dig_workingfrom": "WorkingFrom",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_Statuses",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_Statuses (Views)",
+    "Name": "_dig_dpm_status_views",
+    "RelatedEntityName": "DPM_Statuses",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "167ad35d-4a42-4755-bbc6-a08b59ee18cd": "DPM_Status Advanced Find View",
+      "25efa139-cccb-42ad-8e09-329515f1cb95": "Inactive DPM_Statuses",
+      "476e2ae7-eb2e-447d-a7a9-d4fb3c943e50": "DPM_Status Lookup View",
+      "6ec80949-034c-4486-8d84-3b0ed3eaf926": "Active DPM_Statuses",
+      "af46ee65-5cc0-44f1-a800-46452e0e73fe": "DPM_Status Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_Statuses)",
+    "Name": "dig_dpm_status_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_Statuses",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_Statuses)",
+    "Name": "dig_dpm_status_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_Statuses"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_Statuses",
+    "Type": "OptionSetInfo"
+  }
+]
