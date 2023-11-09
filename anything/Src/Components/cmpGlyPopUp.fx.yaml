@@ -1,0 +1,69 @@
+cmpGlyPopUp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height
+    pClose: =true
+    pSubHeader: ="Text"
+    Visible: =true
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    RecBackgroundGly As rectangle:
+        Fill: =RGBA(235, 236, 240, 0.6)
+        Height: =App.Height
+        Width: =App.Width
+        ZIndex: =1
+
+    RecPopupbgGly As rectangle:
+        BorderColor: =gblBranding.Colors.PrimaryColor1
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =486
+        Width: =959
+        X: =203
+        Y: =141
+        ZIndex: =2
+
+    RecPopupHeadeGly As rectangle:
+        Fill: =gblBranding.Colors.PrimaryColor1
+        Height: =65
+        Width: =959
+        X: =203
+        Y: =141
+        ZIndex: =3
+
+    btnClose As Button:
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =0
+        Height: =34
+        OnSelect: =cmpGlyPopUp.pClose()
+        Text: ="Close"
+        Width: =126
+        X: =216
+        Y: =576
+        ZIndex: =7
+
+    lblSubHeaderGly As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =15
+        Text: =cmpGlyPopUp.pSubHeader
+        Width: =330
+        X: =518
+        Y: =152
+        ZIndex: =9
+
+    icoClose As icon.Cancel:
+        Color: =gblBranding.Colors.PrimaryColor1
+        Height: =24
+        Icon: =Icon.Cancel
+        OnSelect: =cmpGlyPopUp.pClose()
+        Width: =24
+        X: =1342
+        ZIndex: =10
+

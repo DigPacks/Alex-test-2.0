@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_schedules",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_schedule",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_Schedules",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_dpm_schedule_AsyncOperations": "System Jobs",
+      "dig_dpm_schedule_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_schedule_DuplicateBaseRecord": "Duplicate Records (dig_dpm_schedule_DuplicateBaseRecord)",
+      "dig_dpm_schedule_DuplicateMatchingRecord": "Duplicate Records (dig_dpm_schedule_DuplicateMatchingRecord)",
+      "dig_dpm_schedule_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_schedule_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_schedule_ProcessSession": "Process Sessions",
+      "dig_dpm_schedule_SyncErrors": "Sync Errors",
+      "dig_dpm_scheduleid": "DPM_Schedule",
+      "dig_LU_MemberID": "LU_MemberID",
+      "dig_memberid": "MemberID",
+      "dig_scheduleid": "ScheduleID",
+      "dig_workingdate": "WorkingDate",
+      "dig_workingfrom": "WorkingFrom",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_Schedules",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_Schedules (Views)",
+    "Name": "_dig_dpm_schedule_views",
+    "RelatedEntityName": "DPM_Schedules",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6b533b35-2ced-4325-bbc7-8174d215fea1": "Inactive DPM_Schedules",
+      "7256b42c-259f-4d65-be27-a70ed7b9f687": "DPM_Schedule Associated View",
+      "808847e4-5400-ee11-8f6d-6045bdd1d26a": "Todays Schedule",
+      "b874cf79-ce71-4f1c-9a06-53782aeba452": "DPM_Schedule Advanced Find View",
+      "dba75358-5600-ee11-8f6d-6045bdd1d26a": "Weekly Schedule",
+      "e0bf21ec-c03c-40b6-b4c4-f28704efca9a": "DPM_Schedule Lookup View",
+      "edba3652-77ea-ed11-8847-6045bdd1d26a": "Schedule",
+      "faaab3f9-da30-460e-ac77-0543639d9cc2": "Active DPM_Schedules"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_Schedules)",
+    "Name": "dig_dpm_schedule_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_Schedules"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_Schedules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_Schedules)",
+    "Name": "dig_dpm_schedule_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_Schedules"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_Schedules",
+    "Type": "OptionSetInfo"
+  }
+]

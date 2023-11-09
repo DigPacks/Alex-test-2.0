@@ -1,0 +1,197 @@
+cmpTabList As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =80
+    pDisabledTab: =
+    pFontColor: =Color.Black
+    pHoverColor: =RGBA(235, 236, 240, 0.3)
+    pTabColor: =gblBranding.Colors.PrimaryColor1
+    pTabFill: =Color.White
+    pTabList: |-
+        =Table({
+                ID: 1,
+                Name: "Members",
+                Logo: Icon.Person,
+                ShowValidation: false
+            },
+            {
+                ID: 2,
+                Name: "Projects",
+                Logo: Icon.Draw,
+                ShowValidation: false
+            },
+            {
+                ID: 3,
+                Name: "Schedule",
+                Logo: Icon.CalendarBlank,
+                ShowValidation: false
+            })
+    Width: =800
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    conTabListH As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =cmpTabList.pTabFill
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =Parent.Height<Parent.Width
+        Width: =Parent.Width
+        ZIndex: =2
+
+        glyTabList As gallery.galleryHorizontal:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DelayItemLoading: =true
+            DisplayMode: =
+            Height: =Parent.Height
+            Items: =cmpTabList.pTabList
+            LayoutMinHeight: =
+            LayoutMinWidth: =
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplateSize: =Parent.Width/CountRows(cmpTabList.pTabList)-7
+            Width: =Parent.Width
+            ZIndex: =1
+
+            lblNameTab As label:
+                Align: =Align.Center
+                Color: =cmpTabList.pFontColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                OnSelect: =Select(Parent)
+                Size: =11
+                Text: =ThisItem.Name
+                Visible: =cmpTabList.Width >300 && cmpTabList.Height>70
+                Width: =Parent.TemplateWidth
+                Y: =36
+                ZIndex: =1
+
+            icoLogoTab As icon.Add:
+                Color: =If(ThisItem.IsSelected,cmpTabList.pTabColor,Color.Gray)
+                Fill: =Color.Transparent
+                Height: =30
+                Icon: =ThisItem.Logo
+                OnSelect: =Select(Parent)
+                Width: =30
+                X: =(Parent.TemplateWidth-Self.Width)/2
+                Y: =If(cmpTabList.Width<100, (Parent.TemplateHeight-Self.Height)/2,6)
+                ZIndex: =2
+
+            recSelected As rectangle:
+                Fill: =If(ThisItem.IsSelected,cmpTabList.pTabColor,Color.Gray)
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight-1
+                ZIndex: =3
+
+            btnTab As button:
+                BorderThickness: =0
+                DisabledFill: =RGBA(235, 236, 240, 0.6)
+                DisplayMode: =If(ThisItem.ID = cmpTabList.pDisabledTab,DisplayMode.Disabled,DisplayMode)
+                Fill: =Color.Transparent
+                FocusedBorderThickness: =0
+                Height: =Parent.TemplateHeight
+                HoverFill: =cmpTabList.pHoverColor
+                OnSelect: |-
+                    =Set(locSelectedTab, ThisItem.ID);
+                    Switch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))
+                PressedFill: =Color.Transparent
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: =""
+                Width: =Parent.TemplateWidth
+                ZIndex: =4
+
+            icoAlert As icon.Error:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =Color.GreenYellow
+                Height: =24
+                Icon: =Icon.Error
+                OnSelect: =
+                Visible: =ThisItem.ShowValidation
+                Width: =24
+                X: =Parent.TemplateWidth-24
+                ZIndex: =5
+
+    conTabListV As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =cmpTabList.pTabFill
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =Parent.Height>Parent.Width
+        Width: =Parent.Width
+        ZIndex: =3
+
+        glyTabListV As gallery.galleryVertical:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DelayItemLoading: =true
+            Height: =Parent.Height
+            Items: =cmpTabList.pTabList
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplateSize: =Parent.Height/CountRows(cmpTabList.pTabList)-7
+            Width: =Parent.Width
+            ZIndex: =1
+
+            lblNameV As label:
+                Align: =Align.Center
+                Color: =cmpTabList.pFontColor
+                Font: =Font.'Segoe UI'
+                Height: =25
+                OnSelect: =Select(Parent)
+                Size: =11
+                Text: =ThisItem.Name
+                Visible: =Parent.Width>=100
+                Width: =Parent.TemplateWidth-3
+                X: =3
+                Y: =Parent.TemplateHeight/2
+                ZIndex: =1
+
+            recSelectedV As rectangle:
+                Fill: =If(ThisItem.IsSelected,cmpTabList.pTabColor,Color.Gray)
+                Height: =Parent.TemplateHeight
+                OnSelect: =Select(Parent)
+                Width: =3
+                ZIndex: =2
+
+            icoLogoTabV As icon.Add:
+                Color: =If(ThisItem.IsSelected,cmpTabList.pTabColor,Color.Gray)
+                Fill: =Color.Transparent
+                Height: =30
+                Icon: =ThisItem.Logo
+                OnSelect: =Select(Parent)
+                Width: =30
+                X: =(Parent.TemplateWidth-Self.Width)/2+3
+                Y: =(Parent.TemplateHeight/2)-Self.Height
+                ZIndex: =3
+
+            btnTabV As button:
+                BorderThickness: =0
+                DisabledFill: =RGBA(235, 236, 240, 0.6)
+                DisplayMode: =If(ThisItem.ID = cmpTabList.pDisabledTab,DisplayMode.Disabled,DisplayMode)
+                Fill: =Color.Transparent
+                FocusedBorderThickness: =0
+                Height: =Parent.TemplateHeight
+                HoverFill: =cmpTabList.pHoverColor
+                OnSelect: |-
+                    =Set(locSelectedTab, ThisItem.ID);
+                    Switch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))
+                PressedFill: =Color.Transparent
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: =""
+                Width: =Parent.TemplateWidth
+                Y: =0.6666666666666856
+                ZIndex: =4
+

@@ -1,0 +1,110 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_projects",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_project",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_Projects",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "bpf_dig_dpm_project_dig_dpm_projectapproval": "DPM_ProjectApproval",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_createdbydisplayname": "CreatedByDisplayName",
+      "dig_createdbyemail": "CreatedByEmail",
+      "dig_dpm_project_AsyncOperations": "System Jobs",
+      "dig_dpm_project_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_project_DuplicateBaseRecord": "Duplicate Records (dig_dpm_project_DuplicateBaseRecord)",
+      "dig_dpm_project_DuplicateMatchingRecord": "Duplicate Records (dig_dpm_project_DuplicateMatchingRecord)",
+      "dig_dpm_project_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_project_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_project_ProcessSession": "Process Sessions",
+      "dig_dpm_project_SyncErrors": "Sync Errors",
+      "dig_dpm_projectid": "DPM_Project",
+      "dig_LU_ProjectMembers": "LU_ProjectMembers",
+      "dig_projectdescription": "ProjectDescription",
+      "dig_projectduedate": "ProjectDueDate",
+      "dig_projectid": "ProjectID",
+      "dig_projectstatus": "ProjectStatus",
+      "dig_projecttitle": "ProjectTitle",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "processid": "Process Id",
+      "stageid": "(Deprecated) Stage Id",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "traversedpath": "(Deprecated) Traversed Path",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_Projects",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_Projects (Views)",
+    "Name": "_dig_dpm_project_views",
+    "RelatedEntityName": "DPM_Projects",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "14242f17-ebd2-4134-a00f-07f3da599bc4": "DPM_Project Lookup View",
+      "1aae3641-acff-ed11-8f6d-6045bdd1d26a": "Completed Projects",
+      "1b0182d0-5a3b-4b04-81a8-bb7e810b0208": "Inactive DPM_Projects",
+      "34cfc7fb-75ea-ed11-8847-6045bdd1d26a": "Current Projects",
+      "4527bc96-5197-45a7-9b55-d9d2976ad145": "DPM_Project Advanced Find View",
+      "818ed4ac-1828-4404-b35f-a82d24a9e016": "DPM_Project Associated View",
+      "9060ed0b-1f43-4c21-9617-793cf44749f6": "Active DPM_Projects"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_Projects)",
+    "Name": "dig_dpm_project_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_Projects"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_Projects)",
+    "Name": "dig_dpm_project_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_Projects"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_Projects",
+    "Type": "OptionSetInfo"
+  }
+]

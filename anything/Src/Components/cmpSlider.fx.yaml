@@ -1,0 +1,90 @@
+cmpSlider As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =60
+    pHeader: ="Text"
+    pMax: =100
+    pMaxColor: =Color.Green
+    pMedColor: =Color.Yellow
+    pMin: =0
+    pMinColor: =Color.Red
+    pOutputValue: =sld.Value
+    pWidth: |
+        =1000
+    Width: =If(cmpSlider.pWidth <= 150, 150, cmpSlider.pWidth)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    btnBackGround As button:
+        BorderColor: =Color.Black
+        DisplayMode: =DisplayMode.View
+        Fill: =If(sld.Value<= sld.Max/3, cmpSlider.pMinColor,sld.Value <=sld.Max/3*2, cmpSlider.pMedColor, cmpSlider.pMaxColor)
+        Height: =30
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: =""
+        Width: =Parent.Width -94
+        X: =46
+        Y: =25
+        ZIndex: =1
+
+    conHeader As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =2
+
+        lblHeader As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            Size: =11
+            Text: =cmpSlider.pHeader& " ("&sld.Value&")"
+            ZIndex: =1
+
+        conSlider As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =50
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+
+            lblMin As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Size: =11
+                Text: =cmpSlider.pMin
+                Width: =50
+                ZIndex: =1
+
+            sld As slider:
+                BorderColor: =
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =0
+                HandleSize: =15
+                Max: =cmpSlider.pMax
+                Min: =cmpSlider.pMin
+                RailFill: =RGBA(0, 0, 0, 0)
+                ShowValue: =false
+                ValueFill: =RGBA(255, 255, 255, 1)
+                ValueHoverFill: =RGBA(255, 255, 255, 1)
+                Width: =Parent.Width - 100
+                Y: =56
+                ZIndex: =2
+
+            lblMax As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Size: =11
+                Text: =cmpSlider.pMax
+                Width: =50
+                ZIndex: =3
+

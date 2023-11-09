@@ -1,0 +1,84 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_dig_dpm_member_forms",
+      "Namespace": "DPM_Members (Forms)",
+      "Values": {
+        "Information": "0d428028-2d18-429e-bdb1-ddafc6434127",
+        "Member Info": "b2746911-78ea-ed11-8847-6045bdd1d26a"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_audit_forms",
+      "Namespace": "DPM_Audits (Forms)",
+      "Values": {
+        "Information": "2a312020-837e-49ba-9a8a-fb95144cac4b"
+      }
+    },
+    {
+      "Kind": "default.cds_cr6a5_dig_tst_fileuploadtest_forms",
+      "Namespace": "DIG_TST_FileUploadTests (Forms)",
+      "Values": {
+        "Information": "f480ce77-b94e-4ceb-bd2b-d62130cddd9e"
+      }
+    },
+    {
+      "Kind": "default.cds_bulkdeletefailure_forms",
+      "Namespace": "Bulk Delete Failures (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_dig_dpm_project_forms",
+      "Namespace": "DPM_Projects (Forms)",
+      "Values": {
+        "Information": "2a5d8a29-4b5d-4591-81e1-d7aa0273b7ad"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_status_forms",
+      "Namespace": "DPM_Statuses (Forms)",
+      "Values": {
+        "Information": "116d76b1-0044-4d2b-b03d-efd85926e03e"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_projectmember_forms",
+      "Namespace": "DPM_ProjectMembers (Forms)",
+      "Values": {
+        "Information": "ac912afd-73d6-4ca3-83c0-f18296d13a81"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_schedule_forms",
+      "Namespace": "DPM_Schedules (Forms)",
+      "Values": {
+        "Information": "5dade0ff-c912-47cf-a97a-7e14a7d6f89d"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_navmenu_forms",
+      "Namespace": "DPM_NavMenus (Forms)",
+      "Values": {
+        "Information": "fe3de82d-7f9e-41e6-b692-9c555c648d96"
+      }
+    },
+    {
+      "Kind": "default.cds_dig_dpm_filter_forms",
+      "Namespace": "DPM_Filters (Forms)",
+      "Values": {
+        "Information": "e61ce8c8-80ff-4596-8eba-9061ca551173"
+      }
+    }
+  ]
+}

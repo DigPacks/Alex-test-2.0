@@ -1,0 +1,58 @@
+cmpNavBar As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =55
+    OnReset: =
+    pDefault: =true
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    conNav As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGap: =3
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        "TabListNav As 'Tab list'.pcfdataset":
+            AccessibleLabel: =""
+            AlignInContainer: =AlignInContainer.End
+            Alignment: ='TabList.Alignment'.Horizontal
+            DefaultSelectedItems: |-
+                =[{NavMenu: gblCurrentScreen}]
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =
+            FontSize: =0
+            Height: =55
+            Items: =DPM_NavMenus
+            LayoutMinHeight: =45
+            LayoutMinWidth: =280
+            OnSelect: =Switch(TabListNav.Selected.NavMenu, "Members",Navigate('Home Screen',ScreenTransition.Fade),"Projects", Navigate('Project Screen',ScreenTransition.Fade), "Schedule", Navigate('Schedule Screen',ScreenTransition.Fade)); Set(gblCurrentScreen, TabListNav.Selected.NavMenu)
+            Size: ="Large"
+            Width: =267
+            X: =556
+            Y: =0
+            ZIndex: =2
+
+            NavMenu1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="NavMenu"
+                FieldName: ="dig_navmenu"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =1
+
+    lblScreen As label:
+        Color: =gblBranding.Colors.PrimaryColor1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =55
+        Size: =11
+        Text: =gblCurrentScreen
+        Width: =94
+        X: =13
+        ZIndex: =2
+

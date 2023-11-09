@@ -1,0 +1,37 @@
+cmpFooter As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: |
+        =25
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    recFooter As rectangle:
+        Fill: =gblBranding.Colors.PrimaryColor1
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+    lblVerNumber As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =25
+        Size: =11
+        Text: ="V 1"
+        X: =15
+        ZIndex: =2
+
+    HtmlTextContactUs As htmlViewer:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =25
+        HtmlText: |-
+            ="<div style = text-align:right;padding-top:2px'>Contact <a href='mailto:admin@digpacks.co.uk'>DigPacks</a></div>"
+        PaddingBottom: =0
+        PaddingTop: =0
+        Width: =149
+        X: =1198
+        ZIndex: =3
+

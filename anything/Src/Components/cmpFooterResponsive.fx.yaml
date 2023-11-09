@@ -1,0 +1,45 @@
+cmpFooterResponsive As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =0
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    conFooterSch_1 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =gblBranding.Colors.PrimaryColor1
+        Height: =40
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =10
+        ZIndex: =1
+
+        lblVerNumber_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FillPortions: =1
+            Font: =Font.'Segoe UI'
+            Height: =25
+            Size: =11
+            Text: ="  V1"
+            X: =15
+            ZIndex: =1
+
+        HtmlTextContactUs_2 As htmlViewer:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =25
+            HtmlText: |-
+                ="<div style = text-align:right;padding-top:2px'>Contact <a href='mailto:admin@digpacks.co.uk'>DigPacks</a></div>"
+            PaddingBottom: =0
+            PaddingTop: =0
+            Width: =149
+            X: =1183
+            ZIndex: =2
+
+        Label4_1 As label:
+            Text: =""
+            Width: =20
+            ZIndex: =3
+

@@ -1,0 +1,125 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(
+            colConfig,
+            Table(
+                {
+                    Title: "DigPacks",
+                    ConfigValue: "https://digpacks.co.uk/wp-content/uploads/2021/09/MainPic_magenta.png",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "AppBackgroundImage",
+                    ConfigValue: "",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "PrimaryColor1",
+                    ConfigValue: "#b61275",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "PrimaryColor2",
+                    ConfigValue: "#ecc8dc",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "SecondaryColor1",
+                    ConfigValue: "#000000",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "SecondaryColor2",
+                    ConfigValue: "#ffffff",
+                    IsEditableFromApp: false
+                },
+                {
+                    Title: "FooterText",
+                    ConfigValue: "<div style = text-align:right;padding-top:10px'>contact <a href='mailto:admin@digpacks.co.uk'>DigPacks</a></div>",
+                    IsEditableFromApp: false
+                }
+            )
+        );
+        Set(
+            gblBranding,
+            {
+                Images: {
+                    DigPacksLogo: LookUp(
+                        colConfig,
+                        Title = "DigPacksLogo"
+                    ).ConfigValue,
+                    AppBackground: LookUp(
+                        colConfig,
+                        Title = "AppBackgroundImage"
+                    ).ConfigValue
+                },
+                Colors: {
+                    PrimaryColor1: ColorValue(
+                        LookUp(
+                            colConfig,
+                            Title = "PrimaryColor1"
+                        ).ConfigValue
+                    ),
+                    PrimaryColor1AsHex: LookUp(
+                        colConfig,
+                        Title = "PrimaryColor1"
+                    ).ConfigValue,
+                    PrimaryColor2: ColorValue(
+                        LookUp(
+                            colConfig,
+                            Title = "PrimaryColor2"
+                        ).ConfigValue
+                    ),
+                    SecondaryColor1: ColorValue(
+                        LookUp(
+                            colConfig,
+                            Title = "SecondaryColor1"
+                        ).ConfigValue
+                    ),
+                    SecondaryColor2AsHex: LookUp(
+                        colConfig,
+                        Title = "SecondaryColor2"
+                    ).ConfigValue,
+                    SecondaryColor2: ColorValue(
+                        LookUp(
+                            colConfig,
+                            Title = "SecondaryColor2"
+                        ).ConfigValue
+                    )
+                },
+                Text: {
+                    FooterText: LookUp(
+                        colConfig,
+                        Title = "FooterText"
+                    ).ConfigValue
+                }
+            }
+        );
+        ClearCollect(
+            colTabs,
+            {
+                ID: 1,
+                Name: "Members",
+                Logo: Icon.Person
+            },
+            {
+                ID: 2,
+                Name: "Projects",
+                Logo: Icon.Draw
+            },
+            {
+                ID: 3,
+                Name: "Schedule",
+                Logo: Icon.CalendarBlank
+            }
+        ); 
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

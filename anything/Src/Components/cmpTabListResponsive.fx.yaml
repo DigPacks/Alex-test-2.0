@@ -1,0 +1,297 @@
+cmpTabListResponsive As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =80
+    pDisableTab: =0
+    pFontColor: =RGBA(0, 0, 0, 1)
+    pHoverFill: =RGBA(235, 236, 240, 0.3)
+    pShowIcons: =true
+    pTabList: |-
+        =Table({
+                ID: 1,
+                Name: "Members",
+                Logo: Icon.Person,
+                ShowValidation: false
+            },
+            {
+                ID: 2,
+                Name: "Projects",
+                Logo: Icon.Draw,
+                ShowValidation: false
+            },
+            {
+                ID: 3,
+                Name: "Schedule",
+                Logo: Icon.CalendarBlank,
+                ShowValidation: false
+            })
+    pTabListColor: =gblBranding.Colors.PrimaryColor1
+    pTabListFill: =RGBA(0, 0, 0, 0)
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    conTabs As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =cmpTabListResponsive.pTabListFill
+        Height: =Parent.Height
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        glyTabs As gallery.galleryHorizontal:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Default: |-
+                =
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                First(Self.AllItems)
+            DelayItemLoading: =true
+            Height: =Parent.Height
+            Items: =cmpTabListResponsive.pTabList
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplateSize: =Parent.Width/CountRows(colTabs)-6
+            Width: =Parent.Width
+            ZIndex: =1
+
+            lblTabName As label:
+                Align: =Align.Center
+                Color: =cmpTabListResponsive.pFontColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =37
+                OnSelect: =Select(Parent)
+                Size: =12
+                Text: =ThisItem.Name
+                Visible: |-
+                    =//'Schdule Screen Responsive'.Size <>1
+                    App.ActiveScreen.Size <>1
+                Width: =Parent.TemplateWidth
+                X: =(Parent.TemplateWidth-Self.Width)/2
+                Y: =If(cmpTabListResponsive.pShowIcons = false, Parent.TemplateHeight/4,33)
+                ZIndex: =1
+
+            icoLogo As icon.Add:
+                Color: =cmpTabListResponsive.pTabListColor
+                Fill: =Color.Transparent
+                Height: =35
+                Icon: =ThisItem.Logo
+                OnSelect: =Select(Parent)
+                Visible: =cmpTabListResponsive.pShowIcons
+                Width: =35
+                X: =(Parent.TemplateWidth-Self.Width)/2
+                Y: =6
+                ZIndex: =2
+
+            recSelectedTab As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =cmpTabListResponsive.pTabListColor
+                Height: =2
+                OnSelect: =Select(Parent)
+                Visible: =locSelectedTab = ThisItem.ID
+                Width: =Parent.TemplateWidth
+                Y: =68
+                ZIndex: =3
+
+            strAlert As star:
+                Fill: =Color.Yellow
+                Height: =30
+                OnSelect: =Select(Parent)
+                Visible: =If(locAlertTab = ThisItem.ID,true,false)
+                Width: =30
+                X: =(Parent.TemplateWidth-Self.Width)
+                ZIndex: =4
+
+            btnBG As button:
+                BorderThickness: =0
+                DisabledColor: =RGBA(235, 236, 240, 0.6)
+                DisabledFill: =RGBA(235, 236, 240, 0.9)
+                DisplayMode: =If(ThisItem.ID = cmpTabListResponsive.pDisableTab,DisplayMode.Disabled,DisplayMode)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =Parent.TemplateHeight
+                HoverBorderColor: =Self.Fill
+                HoverFill: =cmpTabListResponsive.pHoverFill
+                OnSelect: |-
+                    =Set(locSelectedTab, ThisItem.ID);
+                    Switch(ThisItem.ID,1,Navigate('Home Screen',ScreenTransition.Fade),2,Navigate('Project Screen',ScreenTransition.Fade),3,Navigate('Schedule Screen',ScreenTransition.Fade))
+                PressedFill: =Self.Fill
+                Text: =""
+                Width: =Parent.TemplateWidth
+                ZIndex: =5
+
+            icoNotify As icon.Error:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =Color.GreenYellow
+                Height: =30
+                Icon: =Icon.Error
+                OnSelect: =
+                Visible: =ThisItem.ShowValidation
+                Width: =30
+                X: =419
+                ZIndex: =6
+

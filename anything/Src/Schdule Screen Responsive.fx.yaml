@@ -1,0 +1,599 @@
+"'Schdule Screen Responsive' As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    OnVisible: |-
+        =UpdateContext({locSortColumn:"First Name", locSortOrder:SortOrder.Ascending,locSortColumnAudit:"Audit ID", locSortOrderAudit:SortOrder.Ascending, locIconAudit: Icon.ChevronDown, locIcon: Icon.ChevronDown});
+        Set(gblCurrentScreen,"Schedule")
+
+    conTestScreen As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        conHeaderSch As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =gblBranding.Colors.PrimaryColor1
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =25
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Rectangle2 As rectangle:
+                Fill: =Color.Transparent
+                Width: =1
+                ZIndex: =1
+
+            icoHeaderHome_1 As icon.Add:
+                Color: =gblBranding.Colors.SecondaryColor2
+                Height: =Parent.Height-10
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Home Screen',ScreenTransition.Fade)
+                Width: =50
+                X: =20
+                ZIndex: =2
+
+            lblHeaderTitle_1 As label:
+                Color: =gblBranding.Colors.SecondaryColor2
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height-10
+                Size: =15
+                Text: ="Digpacks Members App - " & Substitute(App.ActiveScreen.Name," Screen","")
+                Width: =384
+                X: =52
+                ZIndex: =3
+
+            lblGreetings_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =12
+                Text: ="Hello " & User().FullName
+                Visible: ='Schdule Screen Responsive'.Size <>1
+                Width: =130
+                X: =1146
+                Y: =15
+                ZIndex: =4
+
+            imgUser_1 As image:
+                Height: =Parent.Height
+                Image: =User().Image
+                ImagePosition: =ImagePosition.Center
+                Width: =66
+                X: =1278
+                ZIndex: =5
+
+        conNavBar As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =80
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =5
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            cmpTabList_3 As cmpTabListResponsive:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+
+        conScheduleScreenBG As groupContainer.horizontalAutoLayoutContainer:
+            Height: =615
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            LayoutWrap: =true
+            Width: =App.Width
+            Y: =128
+            ZIndex: =3
+
+            conScheduleGly_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =563
+                LayoutMinHeight: =573
+                LayoutMinWidth: =250
+                Width: =431
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                glyTemplateBodySch_2 As gallery.variableTemplateHeightGallery:
+                    FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                    FocusedBorderThickness: =0
+                    Height: =430
+                    Items: =If(!IsBlank(chtSchedule_2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1Bdig_workingfrom'),Filter(DPM_Schedules, WorkingDate = dteSchedule_2.Value, WorkingFrom=chtSchedule_2.Selected.'data-ADB4D7A662F548B49FAC2B986E348A1Bdig_workingfrom'),Filter(DPM_Schedules, WorkingDate = dteSchedule_2.Value))
+                    Layout: =Layout.Vertical
+                    ShowNavigation: =true
+                    ShowScrollbar: =false
+                    TemplateFill: |-
+                        =//If(Self.IsSelected, ColorFade(gblBranding.Colors.PrimaryColor1 -80%), RGBA(0, 0, 0, 0))
+                        If(Self.IsSelected, Color.Blue, Color.Red)
+                    TemplateSize: =48
+                    Width: =429
+                    X: =18
+                    Y: =123
+                    ZIndex: =1
+
+                    recSch_2 As rectangle:
+                        BorderColor: =RGBA(204, 204, 204, 1)
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.View
+                        Fill: =If(ThisItem.IsSelected, Color.LightBlue, Color.WhiteSmoke)
+                        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                        Height: =48
+                        Width: =Parent.TemplateWidth
+                        ZIndex: =1
+
+                    lblNameSch_2 As Label:
+                        AutoHeight: =false
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontSize: =11
+                        FontWeight: =FontWeight.Normal
+                        Height: =48
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =LookUp(DPM_Members, MemberID = ThisItem.MemberID).FullName
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =139
+                        X: =12
+                        Y: =0
+                        ZIndex: =2
+
+                    lblWorkingFromSch_2 As Label:
+                        AutoHeight: =false
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontSize: =11
+                        FontWeight: =FontWeight.Normal
+                        Height: =48
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =ThisItem.WorkingFrom
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =97
+                        X: =146
+                        Y: =0
+                        ZIndex: =3
+
+                    icoWorkingFrom_2 As icon.Add:
+                        Color: =Switch(ThisItem.WorkingFrom, "Home", Color.MediumPurple,"Office", gblBranding.Colors.PrimaryColor1, "On Holiday", Color.Orange, "Sick Leave", Color.DarkOliveGreen, "Leave", Color.Red)
+                        Height: =30
+                        HoverColor: =gblBranding.Colors.PrimaryColor1
+                        Icon: =Switch(ThisItem.WorkingFrom, "Home", Icon.Home,"Office", Icon.OfficeBuilding, "On Holiday", Icon.Airplane, "Sick Leave", Icon.Health, "Leave", Icon.Leave)
+                        OnSelect: =
+                        Width: =30
+                        X: =243
+                        Y: =9
+                        ZIndex: =4
+
+                    btnEditSch_2 As button:
+                        Fill: =gblBranding.Colors.PrimaryColor1
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        HoverFill: =gblBranding.Colors.PrimaryColor2
+                        OnSelect: |-
+                            =UpdateContext({locShowPopupEditSch: true})
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =11
+                        Text: ="Edit"
+                        Width: =100
+                        X: =301
+                        Y: =12
+                        ZIndex: =5
+
+                glyTemplateHdrSch_2 As gallery.variableTemplateHeightGallery:
+                    FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                    FocusedBorderThickness: =2
+                    Height: =48
+                    Items: |-
+                        ={MemberID:"ID",FirstName:"First Name", LastName:"Last Name", StartDate:"Start Date", EndDate:"End Date"}
+                    Layout: =Layout.Vertical
+                    ShowScrollbar: =false
+                    TemplateSize: =40
+                    Width: =429
+                    X: =14
+                    Y: =74
+                    ZIndex: =2
+
+                    lblFullNameHdrSch_2 As Label:
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: ="Name"
+                        Width: =130
+                        X: =13
+                        Y: =0
+                        ZIndex: =1
+
+                    lblWorkingDateHdrSch_2 As Label:
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: ="Working From"
+                        Width: =120
+                        X: =146
+                        Y: =0
+                        ZIndex: =2
+
+                "dteSchedule_2 As 'Date picker'":
+                    AccessibleLabel: =""
+                    BasePaletteColor: =
+                    ContentLanguage: =""
+                    DisplayMode: =DisplayMode.Edit
+                    EndYear: =2050
+                    FontSize: =0
+                    Format: ="Long Abbreviated"
+                    Height: =32
+                    IsEditable: =false
+                    Placeholder: ="Select a date..."
+                    StartOfWeek: ="Sunday"
+                    StartYear: =1970
+                    ValidationState: ="None"
+                    Visible: =true
+                    Width: =320
+                    X: =31
+                    Y: =42
+                    ZIndex: =3
+
+                recSchSep_2 As rectangle:
+                    Fill: =gblBranding.Colors.PrimaryColor1
+                    Height: =1
+                    Visible: ='Schdule Screen Responsive'.Size <>1
+                    Width: =Parent.Width
+                    Y: =80
+                    ZIndex: =4
+
+            conScheduleChart_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =561
+                LayoutMinHeight: =593
+                LayoutMinWidth: =250
+                Width: =332
+                X: =448
+                Y: =40
+                ZIndex: =2
+
+                lblScheduleData_2 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =22
+                    Size: =11
+                    Text: ="Schedule For "&Text(dteSchedule_2.Value,"dddd, dd mmmm yyyy")
+                    Width: =309
+                    X: =76
+                    Y: =45
+                    ZIndex: =1
+
+                chtSchedule_2 As pieChart:
+                    Font: =Font.'Segoe UI'
+                    Height: =320
+                    ItemColorSet: |+
+                        =//ForAll(DPM_Schedules,Switch( WorkingFrom,"On Holiday", Color.Orange,"Leave", Color.Red,"Sick Leave", Color.DarkOliveGreen,"Office",gblBranding.Colors.PrimaryColor1,"Home",Color.MediumPurple, Color.Gray))
+                        [gblBranding.Colors.PrimaryColor1,Color.MediumPurple,Color.Orange,Color.DarkOliveGreen, Color.Red]
+                        
+                    Items: |
+                        =AddColumns(GroupBy(Filter(DPM_Schedules, WorkingDate = dteSchedule_2.Value),"dig_workingfrom","Group"),"CountOfWorkingFrom",CountRows(Group),"NameAndCount",dig_workingfrom & " (" & CountRows(Group) & ")")
+                    Width: =435
+                    X: =13
+                    Y: =56
+                    ZIndex: =2
+
+                lgdWorkingFrom_2 As legend:
+                    Font: =Font.'Segoe UI'
+                    Height: =140
+                    ItemColorSet: =[Color.Orange,Color.Red, Color.DarkOliveGreen, gblBranding.Colors.PrimaryColor1,Color.MediumPurple]
+                    Items: |-
+                        =//Distinct(Filter(DPM_Schedules, WorkingDate = dteSchedule.Value),WorkingFrom) //chtSchedule.SeriesLabels
+                        
+                        DPM_Statuses
+                    Width: =331
+                    X: =83
+                    Y: =415
+                    ZIndex: =3
+
+                Rectangle1 As rectangle:
+                    Fill: =gblBranding.Colors.PrimaryColor1
+                    Height: =593
+                    Width: =1
+                    ZIndex: =5
+
+                recSchSep_3 As rectangle:
+                    Fill: =gblBranding.Colors.PrimaryColor1
+                    Height: =1
+                    Visible: ='Schdule Screen Responsive'.Size <>1
+                    Width: =Parent.Width
+                    Y: =80
+                    ZIndex: =6
+
+            conMembersSchGly_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =561
+                LayoutMinHeight: =593
+                LayoutMinWidth: =250
+                Width: =493
+                X: =780
+                Y: =40
+                ZIndex: =3
+
+                txtInputSearchSch_2 As text:
+                    BorderColor: =gblBranding.Colors.PrimaryColor1
+                    Default: =""
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Height: =32
+                    HintText: ="🔎 Search "
+                    HoverBorderColor: =gblBranding.Colors.PrimaryColor1
+                    HoverColor: =
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    PressedBorderColor: =gblBranding.Colors.PrimaryColor1
+                    Size: =11
+                    Width: =239
+                    X: =31
+                    Y: =42
+                    ZIndex: =1
+
+                glyTemplateBodyMembersSch_2 As gallery.variableTemplateHeightGallery:
+                    FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                    FocusedBorderThickness: =0
+                    Height: =432
+                    Items: |-
+                        =If(
+                            locSortColumn = "First Name",
+                            Sort(
+                                Filter(
+                                    DPM_Members,
+                                    (txtInputSearchSch_2.Text in LastName || txtInputSearchSch_2.Text in FirstName || IsBlank(txtInputSearchSch_2.Text))
+                                ),
+                                FirstName,
+                                If(
+                                    locSortOrder = SortOrder.Descending,
+                                    SortOrder.Descending,
+                                    SortOrder.Ascending
+                                )
+                            ),
+                            If(
+                                locSortColumn = "Last Name",
+                                Sort(
+                                    Filter(
+                                        DPM_Members,
+                                        (txtInputSearchSch_2.Text in LastName || txtInputSearchSch_2.Text in FirstName || IsBlank(txtInputSearchSch_2.Text))
+                                    ),
+                                    LastName,
+                                    If(
+                                        locSortOrder = SortOrder.Ascending,
+                                        SortOrder.Ascending,
+                                        SortOrder.Descending
+                                    )
+                                )
+                            )
+                        )
+                    Layout: =Layout.Vertical
+                    ShowNavigation: =true
+                    ShowScrollbar: =false
+                    TemplateFill: |-
+                        =//If(Self.IsSelected, ColorFade(gblBranding.Colors.PrimaryColor1 -80%), RGBA(0, 0, 0, 0))
+                        If(Self.IsSelected, Color.Blue, Color.Red)
+                    TemplateSize: =48
+                    Width: =389
+                    X: =22
+                    Y: =123
+                    ZIndex: =2
+
+                    recMemberInfoSch_2 As rectangle:
+                        BorderColor: =RGBA(204, 204, 204, 1)
+                        BorderThickness: =1
+                        DisplayMode: =DisplayMode.View
+                        Fill: =Color.WhiteSmoke
+                        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                        Height: =48
+                        Width: =Parent.TemplateWidth
+                        ZIndex: =1
+
+                    lblFirstNameSch_2 As Label:
+                        AutoHeight: =false
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontSize: =11
+                        FontWeight: =FontWeight.Normal
+                        Height: =48
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =ThisItem.FirstName
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =73
+                        X: =12
+                        Y: =0
+                        ZIndex: =2
+
+                    lblLastNameSch_2 As Label:
+                        AutoHeight: =false
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontSize: =11
+                        FontWeight: =FontWeight.Normal
+                        Height: =48
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =ThisItem.LastName
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =lblDatetimeHdrSch_2.Width
+                        X: =145
+                        Y: =0
+                        ZIndex: =3
+
+                    btnViewSchIn_2 As button:
+                        Fill: =gblBranding.Colors.PrimaryColor1
+                        Height: =24
+                        HoverFill: =gblBranding.Colors.PrimaryColor2
+                        OnSelect: |-
+                            =UpdateContext({locShowPopupSchIn: true})
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =11
+                        Text: ="Schedule"
+                        Width: =100
+                        X: =249
+                        Y: =13
+                        ZIndex: =4
+
+                glyTemplateHdrMembersSch_2 As gallery.variableTemplateHeightGallery:
+                    FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                    FocusedBorderThickness: =2
+                    Height: =62
+                    Items: |-
+                        ={MemberID:"ID",FirstName:"First Name", LastName:"Last Name", StartDate:"Start Date", EndDate:"End Date"}
+                    Layout: =Layout.Vertical
+                    ShowScrollbar: =false
+                    TemplateSize: =40
+                    Width: =443
+                    X: =12
+                    Y: =87
+                    ZIndex: =3
+
+                    lblNameHdrSch_2 As Label:
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =ThisItem.FirstName
+                        Width: =77
+                        X: =17
+                        Y: =0
+                        ZIndex: =1
+
+                    lblDatetimeHdrSch_2 As Label:
+                        Color: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =Select(Parent)
+                        PCFTeamsTheme: ="default"
+                        Text: =ThisItem.LastName
+                        Width: =120
+                        X: =155
+                        Y: =0
+                        ZIndex: =2
+
+                icoFistnameFilterSc_1 As icon.Add:
+                    Color: =If(locSortColumn = "First Name", gblBranding.Colors.PrimaryColor1, gblBranding.Colors.SecondaryColor1)
+                    DisabledColor: |
+                        =RGBA(0, 18, 107, 1)
+                    Height: =24
+                    Icon: =If(locSortColumn="First Name",If(locSortOrder= SortOrder.Ascending, Icon.ChevronUp, Icon.ChevronDown),Icon.Sort)
+                    OnSelect: |-
+                        =UpdateContext(
+                            {
+                                locSortColumn: "First Name",
+                                locSortOrder: If(
+                                    locSortOrder = SortOrder.Ascending,
+                                    SortOrder.Descending,
+                                    SortOrder.Ascending
+                                )
+                               
+                            }
+                        )
+                    PressedColor: =gblBranding.Colors.PrimaryColor2
+                    Width: =24
+                    X: =114
+                    Y: =97
+                    ZIndex: =4
+
+                icoLastnaeFilterSch_1 As icon.Add:
+                    Color: =If(locSortColumn = "Last Name", gblBranding.Colors.PrimaryColor1, gblBranding.Colors.SecondaryColor1)
+                    DisabledColor: =RGBA(0, 18, 107, 1)
+                    Height: =24
+                    Icon: =If(locSortColumn="Last Name",If(locSortOrder= SortOrder.Ascending, Icon.ChevronUp, Icon.ChevronDown),Icon.Sort)
+                    OnSelect: |-
+                        =UpdateContext({locSortColumn: "Last Name", locSortOrder: If(locSortOrder = SortOrder.Ascending, SortOrder.Descending, SortOrder.Ascending)})
+                    Width: =24
+                    X: =249
+                    Y: =97
+                    ZIndex: =5
+
+                Rectangle1_1 As rectangle:
+                    Fill: =gblBranding.Colors.PrimaryColor1
+                    Height: =593
+                    Width: =1
+                    ZIndex: =6
+
+                recSchSep_4 As rectangle:
+                    Fill: =gblBranding.Colors.PrimaryColor1
+                    Height: =1
+                    Visible: ='Schdule Screen Responsive'.Size <>1
+                    Width: =Parent.Width
+                    Y: =80
+                    ZIndex: =7
+
+        conFooterSch As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =gblBranding.Colors.PrimaryColor1
+            FillPortions: =0
+            Height: =40
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            lblVerNumber_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                Height: =25
+                Size: =11
+                Text: ="  V1"
+                X: =15
+                ZIndex: =1
+
+            HtmlTextContactUs_1 As htmlViewer:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Segoe UI'
+                Height: =25
+                HtmlText: |-
+                    ="<div style = text-align:right;padding-top:2px'>Contact <a href='mailto:admin@digpacks.co.uk'>DigPacks</a></div>"
+                PaddingBottom: =0
+                PaddingTop: =0
+                Width: =149
+                X: =1183
+                ZIndex: =2
+
+            Label4 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =3
+

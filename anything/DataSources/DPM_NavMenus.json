@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_navmenus",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_navmenu",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_NavMenus",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_dpm_navmenu_AsyncOperations": "System Jobs",
+      "dig_dpm_navmenu_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_navmenu_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_navmenu_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_navmenu_ProcessSession": "Process Sessions",
+      "dig_dpm_navmenu_SyncErrors": "Sync Errors",
+      "dig_dpm_navmenuid": "DPM_NavMenu",
+      "dig_name": "Name",
+      "dig_navmenu": "NavMenu",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_NavMenus",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_NavMenus (Views)",
+    "Name": "_dig_dpm_navmenu_views",
+    "RelatedEntityName": "DPM_NavMenus",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "007646d4-d1f4-4ba5-bcc4-1e897273b6f8": "DPM_NavMenu Advanced Find View",
+      "06a09898-5c8f-400b-b11c-80e08540d30f": "DPM_NavMenu Lookup View",
+      "28570810-1768-4f0f-9c75-07c6c41b0198": "DPM_NavMenu Associated View",
+      "3017ee3c-6116-4e65-b055-50538f3701fb": "Inactive DPM_NavMenus",
+      "e42a4f17-e6b9-4be4-9be0-a698abb31492": "Active DPM_NavMenus"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_NavMenus)",
+    "Name": "dig_dpm_navmenu_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_NavMenus"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_NavMenus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_NavMenus)",
+    "Name": "dig_dpm_navmenu_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_NavMenus"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_NavMenus",
+    "Type": "OptionSetInfo"
+  }
+]

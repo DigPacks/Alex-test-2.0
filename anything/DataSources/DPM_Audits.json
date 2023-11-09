@@ -1,0 +1,102 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "dig_dpm_audits",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "dig_dpm_audit",
+    "MaxGetRowsCount": 2000,
+    "Name": "DPM_Audits",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "dig_auditdescription": "AuditDescription",
+      "dig_auditid": "AuditID",
+      "dig_audittitle": "AuditTitle",
+      "dig_createdbyemail": "CreatedByEmail",
+      "dig_createdbyname": "CreatedByName",
+      "dig_dpm_audit_AsyncOperations": "System Jobs",
+      "dig_dpm_audit_BulkDeleteFailures": "Bulk Delete Failures",
+      "dig_dpm_audit_DuplicateBaseRecord": "Duplicate Records (dig_dpm_audit_DuplicateBaseRecord)",
+      "dig_dpm_audit_DuplicateMatchingRecord": "Duplicate Records (dig_dpm_audit_DuplicateMatchingRecord)",
+      "dig_dpm_audit_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "dig_dpm_audit_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "dig_dpm_audit_ProcessSession": "Process Sessions",
+      "dig_dpm_audit_SyncErrors": "Sync Errors",
+      "dig_dpm_auditid": "DPM_Audit",
+      "dig_memberid": "MemberID",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DPM_Audits",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DPM_Audits (Views)",
+    "Name": "_dig_dpm_audit_views",
+    "RelatedEntityName": "DPM_Audits",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "62225abc-c90e-40d6-a373-1bb179fa2a3c": "DPM_Audit Associated View",
+      "b0682f85-2707-41de-ad05-0bf09a75527d": "Inactive DPM_Audits",
+      "b1638e0a-43a2-4eb8-9a46-f30f22d8d668": "DPM_Audit Advanced Find View",
+      "b844e996-bfb1-41c8-953f-dae8c0edc318": "DPM_Audit Lookup View",
+      "d439f571-bff7-4859-94af-0a8a773239ee": "Active DPM_Audits"
+    }
+  },
+  {
+    "DisplayName": "Status (DPM_Audits)",
+    "Name": "dig_dpm_audit_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DPM_Audits"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DPM_Audits",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DPM_Audits)",
+    "Name": "dig_dpm_audit_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DPM_Audits"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DPM_Audits",
+    "Type": "OptionSetInfo"
+  }
+]
