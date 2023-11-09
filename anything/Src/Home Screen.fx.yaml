@@ -1166,3 +1166,9 @@
         Y: =392
         ZIndex: =41
 
+    Label1 As label:
+        Text: ="Hi Alex!"
+        X: =593
+        Y: =20
+        ZIndex: =42
+
